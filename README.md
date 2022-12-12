@@ -6,6 +6,50 @@ https://www.makeuseof.com/tag/mac-terminal-commands-cheat-sheet/
 
 ## Personal Touch
 
+Inspired by a problem many and myself encountered, as well as seeing `jakehilborn`'s `displayplacer` (link here: [displayplacer](https://github.com/jakehilborn/displayplacer)) as a solution, I wanted to dig into how to possibly fix the problem myself and write some script *from scratch*. *For fun*. That repo seems abandoned and forgotten even though it's got 2.2k stars, 64 issues, and 4 PRs. For those who are not familiar, this is a problem that when using 2 external monitors of the same brand and model, the locations of displays would bet swapped (etc).
+
+*No Problem:*
+
+<img src="asset/images/correct_setup.jpg" alt="correct setup" width="250"/> 
+
+*Computer goes to sleep, and the problem comes back 7 / 10 times. (Estimate only)*
+
+<img src="asset/images/incorrect_setup.jpg" alt="correct setup" width="250"/>
+
+Also noting that this is an existing issue that is not getting an official resolution from Apple. I wrote a detailed post to the Apple Support Community, thinking I was being helpful by providing additional information and research around the topic, but it was removed by Apple because apparently my post "contained either feedback or a feature request that was not constructive." Maybe I got too passionate about wanting this problem solved and it sounded *not constructive*.
+
+Here are some links I found that were related to this issue. 
+
+2016/07/26: https://superuser.com/questions/1105308/mac-3-monitor-setup-my-desktop-set-keep-switching-places-between-monitors
+
+2020/09/26: https://discussions.apple.com/thread/252455895
+
+2021/02/15: https://discussions.apple.com/thread/251850559
+
+2021/10/28: https://forums.macrumors.com/threads/external-displays-swapping-arrangement-not-remembered.2320211/
+
+Before I got too far, I decided to try using a different connector to connect to my second monitor. It seemed to have solved this problem, for now (dated 12/12/2022).
+
+### Current Setup
+
+- 2021 16" Macbook Pro (MacBookPro18,1) with 16GB ram + 1TB SSD
+- 1st external monitor is using either
+  - some HDMI cable I found laying around
+  - same HDMI cable connected + an Anker USB C Hub ([Amazon link](https://a.co/d/caTe866))
+- 2nd external monitor is using 
+  - a Benfei USB-C to VGA adapter ([Amazon link](https://a.co/d/09W7PM0)) + Amazon Basics VGA to VGA PC Computer Monitor Cable - 6 Feet (1.8 Meters) ([Amazon link](https://a.co/d/6RufxgE))
+
+Here are my Mission Control check boxes:
+
+<img src="asset/images/mission_control_settings.png" alt="correct setup" width="500"/> 
+
+### Note to Self
+
+Will come back to this repo if the problem comes back again, but will leave this challenge for someone else or for when I am really *bored to death*.
+
+## Personal Notes: 
+### *Mac Termainal Commands That Were Interesting to Me*
+
 | Syntax      | Description |
 | ----------- | ----------- |
 | export PATH=$PATH:absolute/path to/program/ | Execute a program via terminal only in your current session. If you use a program regularly, add the path to shell configuration file. |
@@ -16,7 +60,22 @@ https://www.makeuseof.com/tag/mac-terminal-commands-cheat-sheet/
 | system_profiler SPDisplaysDataType | Shows a list of the available Thunderbolt information. |
 | system_profiler SPUSBDataType | Shows a list of the available USB information. |
 
-Example: 
+### *To be organized*
+
+Command + K Key to clear the screen 
+Below are some Awesome Mac Command Line Commands
+1. caffeinate
+2. Top
+3. sw_vers
+4. system_profiler
+5. softwareupdate
+6. nettop
+7. diskutil list
+8. du
+9. ls
+10. say
+
+Some examples of what I'm seeing: 
 
 ```zsh
 yoyoyojoe@Joeys-MacBook-Pro ~ % system_profiler SPDisplaysDataType
